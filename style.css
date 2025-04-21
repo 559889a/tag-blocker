@@ -1,0 +1,143 @@
+.tag-blocker-settings .menu_button {
+    width: fit-content;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+}
+
+.tag-blocker-settings .checkbox {
+    align-items: center;
+}
+
+.tag-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tag-container:empty::after {
+    content: "未找到标签";
+    font-size: 0.95em;
+    opacity: 0.7;
+    display: block;
+    text-align: center;
+}
+
+.tag-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--SmartThemeBorderColor);
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+
+.tag-item .tag-info {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tag-item .tag-name {
+    font-weight: bold;
+}
+
+.tag-item .tag-details {
+    display: block;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+.prompt-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--SmartThemeBorderColor);
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+
+.prompt-info {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.prompt-item .prompt-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.prompt-item .prompt-source {
+    color: var(--SmartThemeBodyColor);
+    opacity: 0.7;
+    font-size: 0.85em;
+    font-style: italic;
+}
+
+.prompt-item.excluded {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.tag-item.disabled {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.flex-container-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-block {
+    background-color: var(--SmartThemeBorderColor);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.info-block.info {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.info-block.warning {
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+.tag-preview {
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    font-family: monospace;
+}
+
+#prompt-search {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.active-filter {
+    background-color: var(--SmartThemeAccentColor);
+    color: var(--SmartThemeTextColor);
+}
+
+.prompt-item.filtered {
+    display: none;
+}
+
+.tag-script-item {
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+.tag-regex-item {
+    background-color: rgba(255, 193, 7, 0.05);
+}
+
+.inline-code {
+    font-family: monospace;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 2px 4px;
+    border-radius: 3px;
+} 

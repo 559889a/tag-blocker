@@ -1,0 +1,99 @@
+<div class="tag-editor">
+    <h3 class="flex-container justifyCenter">
+        <strong>标签编辑器</strong>
+    </h3>
+    <hr />
+    <div class="flex-container-column">
+        <div class="flex1">
+            <label for="tag-start" class="title_restorable">
+                <small>开始标签</small>
+            </label>
+            <div>
+                <input id="tag-start" class="text_pole textarea_compact" type="text" placeholder="例如：<content>" />
+            </div>
+        </div>
+        <div class="flex1">
+            <label for="tag-end" class="title_restorable">
+                <small>结束标签</small>
+            </label>
+            <div>
+                <input id="tag-end" class="text_pole textarea_compact" type="text" placeholder="例如：</content>" />
+            </div>
+        </div>
+        <div class="flex1">
+            <label for="regex-pattern" class="title_restorable">
+                <small>正则表达式模式（高级）</small>
+            </label>
+            <div>
+                <input id="regex-pattern" class="text_pole textarea_compact" type="text" placeholder="例如：/([\s\S]*?<details><summary>摘要<\/summary>|<\/details>[\s\S]*?$)/gs" />
+            </div>
+        </div>
+        <div class="flex1">
+            <label for="replace-string" class="title_restorable">
+                <small>替换文本</small>
+            </label>
+            <div>
+                <input id="replace-string" class="text_pole textarea_compact" type="text" placeholder="留空则完全移除" />
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="flex1">
+                <label for="min-depth" class="title_restorable">
+                    <small>最小楼层</small>
+                </label>
+                <div>
+                    <input id="min-depth" class="text_pole textarea_compact" type="number" min="0" placeholder="从哪层开始应用（默认为0）" />
+                </div>
+            </div>
+            <div class="flex1">
+                <label for="max-depth" class="title_restorable">
+                    <small>最大楼层</small>
+                </label>
+                <div>
+                    <input id="max-depth" class="text_pole textarea_compact" type="number" min="0" placeholder="应用到哪层为止（留空则无限制）" />
+                </div>
+            </div>
+        </div>
+        <div class="flex-container">
+            <label class="checkbox flex-container alignItemsCenter" title="仅在Markdown中应用">
+                <input type="checkbox" id="markdown-only" />
+                <span>仅Markdown</span>
+            </label>
+            <label class="checkbox flex-container alignItemsCenter" title="仅在提示词中应用">
+                <input type="checkbox" id="prompt-only" checked />
+                <span>仅提示词</span>
+            </label>
+            <label class="checkbox flex-container alignItemsCenter" title="在编辑时应用">
+                <input type="checkbox" id="run-on-edit" checked />
+                <span>编辑时应用</span>
+            </label>
+        </div>
+        <div class="flex-container">
+            <label class="title_restorable" for="placement-select">
+                <small>应用位置</small>
+            </label>
+            <div class="flex-container">
+                <label class="checkbox flex-container alignItemsCenter" title="用户输入">
+                    <input type="checkbox" class="placement-option" value="0" />
+                    <span>用户输入</span>
+                </label>
+                <label class="checkbox flex-container alignItemsCenter" title="AI回复">
+                    <input type="checkbox" class="placement-option" value="1" />
+                    <span>AI回复</span>
+                </label>
+                <label class="checkbox flex-container alignItemsCenter" title="系统提示">
+                    <input type="checkbox" class="placement-option" value="2" checked />
+                    <span>系统提示</span>
+                </label>
+            </div>
+        </div>
+        <div class="flex1">
+            <label class="title_restorable">
+                <small>预览</small>
+            </label>
+            <div class="tag-preview">
+                这是<span class="tag-start-preview"></span>被屏蔽的内容<span class="tag-end-preview"></span>的示例
+            </div>
+        </div>
+    </div>
+</div> 

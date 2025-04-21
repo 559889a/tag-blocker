@@ -1,0 +1,97 @@
+<div id="tag_blocker_settings" class="tag-blocker-settings">
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>
+                高级内容处理器
+            </b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+            <div class="flex-container-column">
+                <p>此扩展用于对发送给AI的消息进行高级处理，可根据楼层和标签进行选择性屏蔽或替换。</p>
+                <div id="tag-blocker-info" class="info-block info">
+                    <strong>基本模式</strong>：添加开始和结束标签，系统会自动屏蔽标签之间的内容。<br>
+                    <strong>正则模式</strong>：使用正则表达式精确定义要屏蔽的内容和替换规则。<br>
+                    <strong>楼层限制</strong>：指定规则应用的最小和最大楼层，实现精确控制。
+                </div>
+                <div class="flex-container justifyBetween">
+                    <label class="checkbox flex-container alignItemsCenter" title="自动刷新设置">
+                        <input type="checkbox" id="auto-refresh-toggle" checked />
+                        <span>自动刷新</span>
+                    </label>
+                    <label class="checkbox flex-container alignItemsCenter" title="启用调试日志">
+                        <input type="checkbox" id="debug-mode-toggle" />
+                        <span>调试模式</span>
+                    </label>
+                </div>
+                <div class="flex-container justifyBetween">
+                    <small class="flex1">聊天发生变化时自动扫描并应用规则</small>
+                </div>
+            </div>
+            <hr>
+            <div class="flex-container">
+                <div id="add-tag-button" class="menu_button menu_button_icon" title="添加新标签">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>添加标签</span>
+                </div>
+                <div id="add-regex-button" class="menu_button menu_button_icon" title="添加正则表达式规则">
+                    <i class="fa-solid fa-code"></i>
+                    <span>添加正则</span>
+                </div>
+                <div id="import-script-button" class="menu_button menu_button_icon" title="导入现有脚本">
+                    <i class="fa-solid fa-file-import"></i>
+                    <span>导入脚本</span>
+                </div>
+                <div id="scan-prompts-button" class="menu_button menu_button_icon" title="扫描当前对话">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>扫描对话</span>
+                </div>
+            </div>
+            <div class="flex-container">
+                <div id="exclude-all-button" class="menu_button menu_button_icon" title="排除所有Prompt">
+                    <i class="fa-solid fa-check-double"></i>
+                    <span>排除全部</span>
+                </div>
+                <div id="include-all-button" class="menu_button menu_button_icon" title="包含所有Prompt">
+                    <i class="fa-solid fa-xmark"></i>
+                    <span>包含全部</span>
+                </div>
+                <div id="export-rules-button" class="menu_button menu_button_icon" title="导出规则">
+                    <i class="fa-solid fa-file-export"></i>
+                    <span>导出规则</span>
+                </div>
+            </div>
+            <hr>
+            <div class="padding5">
+                <strong>处理规则列表</strong>
+                <small>这些规则将按顺序应用</small>
+                <div id="tag-list" class="tag-container"></div>
+            </div>
+            <hr>
+            <div class="padding5">
+                <div class="flex-container alignItemsBaseline">
+                    <strong class="flex1">排除的Prompt</strong>
+                    <div id="refresh-prompts-button" class="menu_button menu_button_icon" title="刷新Prompt列表">
+                        <i class="fa-solid fa-refresh"></i>
+                    </div>
+                </div>
+                <small>这些部分不会被应用规则</small>
+                <div class="flex-container">
+                    <input id="prompt-search" class="text_pole" type="text" placeholder="搜索Prompt..." />
+                </div>
+                <div class="flex-container">
+                    <div id="prompt-filter-all" class="menu_button menu_button_icon active-filter">
+                        <span>全部</span>
+                    </div>
+                    <div id="prompt-filter-excluded" class="menu_button menu_button_icon">
+                        <span>仅排除</span>
+                    </div>
+                    <div id="prompt-filter-included" class="menu_button menu_button_icon">
+                        <span>仅包含</span>
+                    </div>
+                </div>
+                <div id="prompt-list" class="tag-container"></div>
+            </div>
+        </div>
+    </div>
+</div> 
